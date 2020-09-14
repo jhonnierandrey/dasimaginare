@@ -10,24 +10,18 @@ class Footer extends Component {
             <footer id="footer">
 				<div className="inner">
 					<section>
-						<h2>Get in touch</h2>
-						<form method="post" action="#">
-							<div className="fields">
-								<div className="field half">
-									<input type="text" name="name" id="name" placeholder="Name" />
-								</div>
-								<div className="field half">
-									<input type="email" name="email" id="email" placeholder="Email" />
-								</div>
-								<div className="field">
-									<textarea name="message" id="message" placeholder="Message"></textarea>
-								</div>
-							</div>
-							<ul className="actions">
-								<li><input type="submit" value="Send" className="primary" /></li>
-							</ul>
-						</form>
+						<h2>We Use</h2>
+						<a href="https://pixabay.com/" target="_blank" rel="noopener noreferrer">
+							<img src="./pixabay-logo.svg" alt="Go to Pixabay"/>
+						</a>
 					</section>
+
+					{ /*
+					<section>
+						<h2>About</h2>
+						<p>This is a React App using the Pixabay API.</p>
+					</section>
+					
 					<section>
 						<h2>Follow</h2>
 						<ul className="icons">
@@ -41,8 +35,11 @@ class Footer extends Component {
 							<li><a href="/" className="icon solid style2 fa-envelope"><span className="label">Email</span></a></li>
 						</ul>
 					</section>
+				
+					*/ }
 					<ul className="copyright">
-						<li>&copy; Untitled. All rights reserved</li>
+						<li>&copy; 2020 JhonnierAndrey Development Studios</li>
+						<li><a href="http://jhonnierandrey.info/" target="_blank" rel="noopener noreferrer">See more</a></li>
 					</ul>
 				</div>
 			</footer>

@@ -13,7 +13,7 @@ function Image(props) {
             <a href={largeImageURL} target="_blank" rel="noopener noreferrer">
                 <h2>{user}</h2>
                 <div className="content">
-                    <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+                    <p>{tags}</p>
                 </div>
             </a>
         </article>

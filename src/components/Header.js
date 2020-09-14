@@ -14,7 +14,7 @@ class Header extends React.Component {
             </div>
 
             <h1>Welcome to IMAGINÄRE</h1>
-            <p>Start searching for great images now</p>
+            <p>Start searching for great Free images now</p>
 
             <Search
               searchParameters = {this.props.searchParameters}

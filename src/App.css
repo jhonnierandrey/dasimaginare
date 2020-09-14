@@ -147,7 +147,7 @@ footer, header, hgroup, menu, nav, section {
   
   a:hover {
     border-bottom-color: transparent;
-    color: #f2849e !important;
+    color: #330D69 !important;
   }
   
   strong, b {
@@ -1852,8 +1852,8 @@ footer, header, hgroup, menu, nav, section {
   }
   
   .icon.style2:hover {
-    color: #f2849e;
-    border-color: #f2849e;
+    color: #330d69;
+    border-color: #330d69;
   }
   
   .icon.style2:active {
@@ -2166,8 +2166,8 @@ footer, header, hgroup, menu, nav, section {
   input[type="tel"]:focus,
   select:focus,
   textarea:focus {
-    border-bottom-color: #f2849e;
-    box-shadow: inset 0 -1px 0 0 #f2849e;
+    border-bottom-color: #330d69;
+    box-shadow: inset 0 -1px 0 0 #330d69;
   }
   
   select {
@@ -2271,8 +2271,8 @@ footer, header, hgroup, menu, nav, section {
   
   input[type="checkbox"]:focus + label:before,
   input[type="radio"]:focus + label:before {
-    border-color: #f2849e;
-    box-shadow: 0 0 0 1px #f2849e;
+    border-color: #330d69;
+    box-shadow: 0 0 0 1px #330d69;
   }
   
   input[type="checkbox"] + label:before {
@@ -2490,8 +2490,8 @@ footer, header, hgroup, menu, nav, section {
   input[type="button"]:hover,
   button:hover,
   .button:hover {
-    color: #f2849e !important;
-    box-shadow: inset 0 0 0 2px #f2849e;
+    color: #330d69 !important;
+    box-shadow: inset 0 0 0 2px #330d69;
   }
   
   input[type="submit"]:active,
@@ -2533,7 +2533,7 @@ footer, header, hgroup, menu, nav, section {
   input[type="button"].primary:hover,
   button.primary:hover,
   .button.primary:hover {
-    background-color: #f2849e;
+    background-color: #330d69;
   }
   
   input[type="submit"].primary:active,
@@ -2748,7 +2748,7 @@ footer, header, hgroup, menu, nav, section {
     }
     
     .tiles article {
-      width: calc(33.33333% - 1.25em);
+      
       margin: 1.25em 0 0 1.25em;
     }
     
@@ -2829,8 +2829,8 @@ footer, header, hgroup, menu, nav, section {
   
   #header .logo .symbol img {
     display: block;
-    width: 2em;
-    height: 2em;
+    width: 4em;
+    height: 4em;
   }
   
   #header nav {
@@ -3159,7 +3159,15 @@ footer, header, hgroup, menu, nav, section {
     -ms-flex-direction: row;
     flex-direction: row;
   }
-  
+
+  #footer section {
+    text-align: center;
+  }
+
+  #footer section img {
+    width: 25%;
+  }
+
   #footer > .inner > * > :last-child {
     margin-bottom: 0;
   }
