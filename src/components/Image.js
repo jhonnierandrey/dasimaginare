@@ -11,9 +11,13 @@ function Image(props) {
                 <img src={largeImageURL} alt={tags} />
             </span>
             <a href={largeImageURL} target="_blank" rel="noopener noreferrer">
-                <h2>{user}</h2>
+                
                 <div className="content">
-                    <p>{tags}</p>
+                    <h2>@{user}</h2>
+                    <p>#{tags}</p>
+                    <div>             
+                        <p><i class="far fa-heart"></i> {likes} | <i class="far fa-eye"></i> {views} </p>
+                    </div>
                 </div>
             </a>
         </article>

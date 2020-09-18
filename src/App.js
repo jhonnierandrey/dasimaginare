@@ -57,9 +57,11 @@ class App extends React.Component {
   }
 
   callApi = () => {
+    const apiKey = '6460308-288ccd6163e39c3aee49cde1f';
     const query = this.state.query
     const page = this.state.page
-    const url = `https://pixabay.com/api/?key=6460308-288ccd6163e39c3aee49cde1f&q=${query}&per_page=30&page=${page}`
+    
+    const url = `https://pixabay.com/api/?key=${apiKey}&q=${query}&per_page=30&page=${page}`
 
     //console.log(url)
     

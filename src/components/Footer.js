@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 
 class Footer extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {  };
-    }
     render() {
         return (
             <footer id="footer">
@@ -37,9 +33,12 @@ class Footer extends Component {
 					</section>
 				
 					*/ }
+					<br />
+					<br />
 					<ul className="copyright">
 						<li>&copy; 2020 JhonnierAndrey Development Studios</li>
 						<li><a href="http://jhonnierandrey.info/" target="_blank" rel="noopener noreferrer">See more</a></li>
+						<li>Made with <a href="https://reactjs.org/">React</a></li>
 					</ul>
 				</div>
 			</footer>

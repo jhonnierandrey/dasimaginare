@@ -6,13 +6,9 @@ class Search extends Component {
 
     getData = (e) => {
         e.preventDefault();
-
-        // tomamos el valor del input y enviamos al componente principal
+        
         const query = this.searchRef.current.value
-
         this.props.searchParameters(query)
-
-        console.log(query);
     }
 
     render() {
