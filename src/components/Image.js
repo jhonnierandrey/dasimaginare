@@ -2,7 +2,7 @@ import React from 'react';
 
 function Image(props) {
 
-    const {largeImageURL, likes, previewURL, tags, views, user} = props.image;
+    const {largeImageURL, likes, tags, views, user} = props.image;
 
     console.log(props);
     return (
