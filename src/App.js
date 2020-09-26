@@ -58,10 +58,11 @@ class App extends React.Component {
 
   callApi = () => {
     const apiKey = '6460308-288ccd6163e39c3aee49cde1f';
-    const query = this.state.query
-    const page = this.state.page
+    const query = this.state.query;
+    const page = this.state.page;
+    const orientation = this.state.orientation;
     
-    const url = `https://pixabay.com/api/?key=${apiKey}&q=${query}&per_page=30&page=${page}`
+    const url = `https://pixabay.com/api/?key=${apiKey}&q=${query}&per_page=30&page=${page}&orientation=${orientation}`
 
     //console.log(url)
     
@@ -70,9 +71,10 @@ class App extends React.Component {
       .then(result => this.setState({images : result.hits})) 
   }
   
-  searchParameters = (query) => {
+  searchParameters = (query, orientation) => {
     this.setState({
       query : query,
+      orientation : orientation,
       page : 1
     }, () => {
       this.callApi();

@@ -1999,8 +1999,13 @@ ul.icons li {
 
 /* Form */
 form {
-  margin: 0 0 2em 0;
+  width: 80%;
+  margin: auto;
   overflow-x: hidden;
+}
+
+.space-input {
+  padding: 10px !important;
 }
 
 form > :last-child {
@@ -2046,6 +2051,12 @@ form > .fields > .field.quarter {
 }
 
 @media screen and (max-width: 480px) {
+  form {
+    width: 100%;
+    margin: 0 0 2em 0;
+    overflow-x: hidden;
+  }
+
   form > .fields {
     width: calc(100% + 3em);
     margin: -1.5em 0 2em -1.5em;
