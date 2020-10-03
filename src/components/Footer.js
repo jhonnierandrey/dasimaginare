@@ -16,7 +16,7 @@ class Footer extends Component {
 					<ul className="copyright">
 						<li>&copy; 2020 JhonnierAndrey Development Studios</li>
 						<li><a href="http://jhonnierandrey.info/" target="_blank" rel="noopener noreferrer">See more</a></li>
-						<li>Made with <a href="https://reactjs.org/">React</a></li>
+						<li>Made with <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a></li>
 					</ul>
 				</div>
 			</footer>
