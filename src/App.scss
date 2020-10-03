@@ -2736,7 +2736,7 @@ body:not(.is-touch) .tiles article:hover .content {
 }
 
 * + .tiles {
-    margin-top: 2em;
+    margin-top: 1em;
 }
 
 body.is-preload .tiles article {
@@ -2753,13 +2753,12 @@ body.is-touch .tiles article .content {
 }
 
 @media screen and (max-width: 1280px) {
-    
+    /*
     .tiles {
         margin: -1.25em 0 0 -1.25em;
     }
-    
-    .tiles article {
-        
+    */
+    .tiles article {     
         margin: 1.25em 0 0 1.25em;
     }
     
@@ -2768,12 +2767,12 @@ body.is-touch .tiles article .content {
 @media screen and (max-width: 980px) {
     
     .tiles {
-        margin: -2.5em 0 0 -2.5em;
+        //margin: 1em 0 0 1em;
     }
     
     .tiles article {
         width: 250px;
-        margin: 2.5em 0 0 2.5em;
+        //margin: 2.5em 0 0 2.5em;
     }
     
 }
@@ -2785,7 +2784,7 @@ body.is-touch .tiles article .content {
     }
     
     .tiles article {
-        width: 250px;
+        width: 100%;
         margin: 1.25em 0 0 1.25em;
     }
     
@@ -2807,7 +2806,11 @@ body.is-touch .tiles article .content {
     .tiles article {
         margin: 1.25em 0 0 0;
     }
-    
+
+    .tiles article > .image img {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 /* Header */
@@ -2933,7 +2936,7 @@ body.is-touch .tiles article .content {
 @media screen and (max-width: 736px) {
     
     #header {
-        padding: 4em 0 0.1em 0 ;
+        //padding: 4em 0 0.1em 0 ;
     }
     
     #header nav {
@@ -3258,9 +3261,13 @@ body.is-menu-visible #menu .close {
 }
 
 @media screen and (max-width: 736px) {
+
+    br {
+        display: none;
+    }
     
     #footer {
-        padding: 3em 0 1em 0 ;
+        //padding: 3em 0 1em 0 ;
     }
     
     #footer > .inner {
@@ -3273,7 +3280,7 @@ body.is-menu-visible #menu .close {
     #footer > .inner section:nth-child(1) {
         width: 100%;
         margin-right: 0;
-        margin: 3em 0 0 0;
+        //margin: 3em 0 0 0;
     }
     
     #footer > .inner section:nth-child(2) {
