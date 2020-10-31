@@ -13,7 +13,7 @@ class Results extends Component {
 
         return(
             <React.Fragment>
-                <section className="tiles">
+                <section className="row">
                     {images.map(image => (
                         <Image
                             key={image.id}

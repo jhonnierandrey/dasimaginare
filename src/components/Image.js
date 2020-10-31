@@ -4,23 +4,24 @@ function Image(props) {
 
     const {largeImageURL, likes, tags, views, user} = props.image;
 
-    console.log(props);
+
+    function showCardBody(){
+        alert('Image has been clicked');
+        //document.querySelector('.card-body').style.display = 'block';
+    }
+
     return (
-        <article>
-            <span className="image">
-                <img src={largeImageURL} alt={tags} />
-            </span>
-            <a href={largeImageURL} target="_blank" rel="noopener noreferrer">
-                
-                <div className="content">
-                    <h2>@{user}</h2>
-                    <p>#{tags}</p>
-                    <div>             
-                        <p><i class="far fa-heart"></i> {likes} | <i class="far fa-eye"></i> {views} </p>
-                    </div>
+        <div className="card">
+            <img src={largeImageURL} className="card-img-top" alt={tags} />
+            <div className="card-body">
+                <h5 className="card-title">@{user}</h5>
+                <p className="card-text">#{tags}</p>
+                <div>             
+                    <p><i className="far fa-heart"></i> {likes} | <i className="far fa-eye"></i> {views} </p>
                 </div>
-            </a>
-        </article>
+                <a href={largeImageURL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Download</a>
+            </div>
+        </div>
     );
 }
 

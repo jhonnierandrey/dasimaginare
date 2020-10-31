@@ -7,9 +7,9 @@ class Header extends React.Component {
   render() {
       return(
           <header id="header">
-            <div className="inner">
-              <a href="/" className="logo">
-                <span className="symbol"><img src={logo} alt="Imaginäre" /></span>
+            <div className="header-logo">
+              <a href="/">
+                <img src={logo} alt="Imaginäre" />
               </a>
             </div>
 

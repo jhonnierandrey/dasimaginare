@@ -17,19 +17,19 @@ class Search extends Component {
     render() {
         return (
             <form onSubmit={this.getData}>
-                <div className="row gtr-uniform">
-                    <div className="col-6 col-12-xsmall">
-                        <input className="space-input" ref={this.searchRef} type="text" placeholder="Type your search here" />
+                <div className="form-row">
+                    <div className="col">
+                        <input className="form-control" ref={this.searchRef} type="text" placeholder="Type your search here" />
                     </div>
-                    <div className="col-2 col-12-xsmall">
-                        <select className="space-input" name="orientation" ref={this.searchOrientation}>
+                    <div className="col">
+                        <select className="form-control" name="orientation" ref={this.searchOrientation}>
                             <option value="all">All</option>
                             <option value="vertical">Mobile</option>
                             <option value="horizontal">Desktop</option>
                         </select>
                     </div>
-                    <div className="col-3 col-12-xsmall">
-                        <input type="submit" value="Search" className="primary button primary fit" />
+                    <div className="col">
+                        <input type="submit" value="Search" className="btn btn-primary" />
                     </div>
                 </div>
             </form>
