@@ -1,28 +1,37 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function Image(props) {
+class Image extends Component {
 
-    const {largeImageURL, likes, tags, views, user} = props.image;
-
-
-    function showCardBody(){
-        alert('Image has been clicked');
-        //document.querySelector('.card-body').style.display = 'block';
+    displayInfo = (e) => {
+        console.log(e.target)
+        document.querySelector('.hidden-data').style.display = 'block'
     }
 
-    return (
-        <div className="card">
-            <img src={largeImageURL} className="card-img-top" alt={tags} />
-            <div className="card-body">
-                <h5 className="card-title">@{user}</h5>
-                <p className="card-text">#{tags}</p>
-                <div>             
-                    <p><i className="far fa-heart"></i> {likes} | <i className="far fa-eye"></i> {views} </p>
+    render() {
+        const {
+            props,
+        } = this;
+
+        const {largeImageURL, likes, tags, views, user} = props.image;
+
+        /*
+        <p className="card-text">#{tags}</p>
+        */
+
+        return (
+            <div className="card">
+                <img src={largeImageURL} className="card-img-top" alt={tags}/>
+                <div className="card-body">
+                    <div>
+                        <p><b><i class="far fa-user"></i> {user}</b> | <i className="far fa-heart"></i> {likes}</p>             
+                        <a href={largeImageURL} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+                            <i className="fas fa-arrow-circle-down"></i>
+                        </a>
+                    </div>
                 </div>
-                <a href={largeImageURL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Download</a>
             </div>
-        </div>
-    );
+        );
+    }
 }
 
 export default Image;
