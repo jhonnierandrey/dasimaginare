@@ -3,24 +3,34 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
 
 // Theme Variables 
+* { box-sizing: border-box;}
 
 $text-color: #585858;
+$effect-color: #330d69;
+$font-family: "Source Sans Pro",Helvetica,sans-serif;
 
-* { box-sizing: border-box;}
+.btn:hover {
+    background-color: $effect-color;
+}
+
+a {
+    color: $text-color;
+    border-bottom: 1px dotted $text-color;
+}
+
+a:hover {
+    text-decoration: none;
+    color: $effect-color;
+}
+
+// Main Containers
 
 body {
     text-align: center;
-    //background-color: #FFFFFF;
-    //background-size: cover;
-    //background-position: center;
-    //min-height: 100vh;
-    //display: flex;
-    //font-size: calc(10px + 2vmin);
     color: $text-color;
     
     input, select, textarea {
-        //color: #585858;
-        font-family: "Source Sans Pro",Helvetica,sans-serif;
+        font-family: $font-family;
         font-size: 16pt;
         font-weight: 300;
         line-height: 1.75;
@@ -29,8 +39,6 @@ body {
 
 #root {
     width: 100%;
-    //display: flex;
-    //justify-content: center;
 }
 
 #wrapper {
@@ -50,25 +58,33 @@ body {
 
 #header {
     padding: 1em 0;
+
+    h1 {
+        font-size: 2.75em;
+        font-weight: 700;
+        line-height: 1.3;
+        margin: 0 0 1em;
+        letter-spacing: -.035em;
+    }
+
+    p {
+        margin: 0 0 2em;
+    }
 }
 
-.header-logo img {
-    width: 64px;
-    height: 64px;
-    margin: 0 0 2.5em;
+.header-logo {
+    img {
+        width: 64px;
+        height: 64px;
+        margin: 0 0 2.5em;
+    }
+
+    a {
+        border: 0;
+    }
 }
 
-#header h1 {
-    font-size: 2.75em;
-    font-weight: 700;
-    line-height: 1.3;
-    margin: 0 0 1em;
-    letter-spacing: -.035em;
-}
-
-#header p {
-    margin: 0 0 2em;
-}
+// SEARCH BAR
 
 form {
     .btn {
@@ -83,46 +99,53 @@ form {
         padding: 0 1.25em 0 1.6em;
         text-transform: uppercase;
     }
-}
 
-.form-row {
-    width: 80%;
-    margin: auto;
-}
+    .form-row {
+        width: 80%;
+        margin: auto;
+    }
 
-.form-row div {
-    padding: 0 0 0 2em !important;
+    .form-row div {
+        padding: 0 0 0 2em;
+    }
 }
 
 .form-control {
     height: 3em;
     border: none;
-    border-bottom: 1px solid #c9c9c9;
+    border-bottom: 1px solid $text-color;
     color: inherit;
     width: 100%; 
+    border-radius: 0;
 }
 
+.form-control:focus {
+    color: $text-color;
+    border-color: $text-color;
+    outline: 0;
+    box-shadow: 0 0 0 1.2rem rgba(255,255,255,0);
+}
 
-// Images - Results Grid
+// IMAGES - RESULTS GRID
 
 section {
     justify-content: center;
     padding-top: 1em;
     color: #FFFFFF;
-}
 
-section .card {
-    width: 250px;
-    height: 250px;
-    margin: 1em;
-}
+    .card {
+        width: 250px;
+        height: 250px;
+        margin: 1em;
+    }
 
-section .card img {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 4px;
-}
+    .card img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+} 
 
 .card-body {
     display: block;
@@ -133,29 +156,17 @@ section .card img {
     left: 0px;
     bottom: 0px;
     right: 0px;
-}
 
-.card-body div {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    div {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
 }
 
 .card-body:hover {
     opacity: 100;
-}
-
-section .card img:hover {
-    .card-body{
-        display: block;
-    }
-}
-
-// SPECIALS
-
-.hidden-data {
-    display: none;
 }
 
 // FOOTER
@@ -169,10 +180,14 @@ section .card img:hover {
 .footer-credits {
     width: 80%;
     margin: auto;
-}
 
-.footer-credits img {
-    width: 15%;
+    a {
+        border: 0;
+    }
+
+    img {
+        width: 15%;
+    }
 }
 
 .footer-copyright {
@@ -185,19 +200,47 @@ section .card img:hover {
     color: rgba(88,88,88,.5);
     margin-top: 1em;
     line-height: 1;
-}
 
-.footer-copyright li {
-    border-left: 1px solid rgba(88,88,88,.15);
-    padding: 0 1em;
-}
+    li {
+        border-left: 1px solid rgba(88,88,88,.15);
+        padding: 0 1em;
+    }
 
-.footer-copyright li:first-child {
-    border-left: 0;
+    li:first-child {
+        border-left: 0;
+    }
 }
 
 // Small devices (landscape phones, 576px and up)
-//@media (max-width: 576px) {}
+@media (max-width: 576px) {
+    
+    #main {
+        width: 100%;
+    }
+
+    #header {
+        h1 {
+            font-size: 1.75em;
+        }
+
+        p {
+            font-size: 0.7em;
+        }
+    }
+
+    .form-row div {
+        padding: 0;
+    }
+
+    section {
+        .card {
+            width: 80%;
+        }
+        .card img {
+            width: 100%;
+        }
+    }
+}
 
 // Medium devices (tablets, 768px and up)
 //@media (min-width: 768px) { ... }

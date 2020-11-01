@@ -14,10 +14,6 @@ class Image extends Component {
 
         const {largeImageURL, likes, tags, views, user} = props.image;
 
-        /*
-        <p className="card-text">#{tags}</p>
-        */
-
         return (
             <div className="card">
                 <img src={largeImageURL} className="card-img-top" alt={tags}/>
