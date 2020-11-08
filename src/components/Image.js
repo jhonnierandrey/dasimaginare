@@ -12,7 +12,7 @@ class Image extends Component {
             props,
         } = this;
 
-        const {largeImageURL, likes, tags, views, user} = props.image;
+        const {largeImageURL, likes, tags, user} = props.image;
 
         return (
             <div className="card">

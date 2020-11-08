@@ -161,9 +161,17 @@ section .card img {
 .footer-credits img {
   width: 15%;
 }
+.footer-credits h2 {
+  font-size: 1.1em;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0 0 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+}
 
 .footer-copyright {
-  width: 80%;
+  width: 95%;
   margin: auto;
   display: flex;
   padding: 0;
@@ -188,13 +196,23 @@ section .card img {
 
   #header h1 {
     font-size: 1.75em;
+    line-height: initial;
+    margin: 0;
   }
   #header p {
     font-size: 0.7em;
+    margin: 0 0 1em;
   }
 
-  .form-row div {
-    padding: 0;
+  .header-logo img {
+    margin: 0 0 1em;
+  }
+
+  form .form-row {
+    width: 95%;
+  }
+  form .form-row div {
+    padding: 0.5em;
   }
 
   section .card {
@@ -202,6 +220,31 @@ section .card img {
   }
   section .card img {
     width: 100%;
+  }
+
+  .footer-credits {
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .footer-credits a {
+    width: 50%;
+  }
+  .footer-credits img {
+    width: 100%;
+  }
+  .footer-credits h2 {
+    margin-bottom: 0;
+  }
+
+  .footer-copyright {
+    text-align: left;
+    flex-direction: column;
+    line-height: initial;
+  }
+  .footer-copyright li {
+    border-left: 0;
   }
 }
 

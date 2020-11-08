@@ -188,10 +188,19 @@ section {
     img {
         width: 15%;
     }
+
+    h2 {
+        font-size: 1.1em;
+        font-weight: 900;
+        line-height: 1.5;
+        margin: 0 0 1em;
+        text-transform: uppercase;
+        letter-spacing: .35em;
+    }
 }
 
 .footer-copyright {
-    width: 80%;
+    width: 95%;
     margin: auto;
     display: flex;
     padding: 0;
@@ -221,15 +230,31 @@ section {
     #header {
         h1 {
             font-size: 1.75em;
+            line-height: initial;
+            margin: 0;
         }
 
         p {
             font-size: 0.7em;
+            margin: 0 0 1em;
         }
     }
 
-    .form-row div {
-        padding: 0;
+    .header-logo {
+        img {
+            margin: 0 0 1em;
+        }
+    }
+
+    form {
+
+        .form-row {
+            width: 95%;
+        }
+
+        .form-row div {
+            padding: 0.5em;
+        }
     }
 
     section {
@@ -238,6 +263,35 @@ section {
         }
         .card img {
             width: 100%;
+        }
+    }
+
+    .footer-credits {
+        width: 95%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        a {
+            width: 50%;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        h2 {
+            margin-bottom: 0;
+        }
+    }
+
+    .footer-copyright {
+        text-align: left;
+        flex-direction: column;
+        line-height: initial;
+
+        li {
+            border-left: 0;
         }
     }
 }
