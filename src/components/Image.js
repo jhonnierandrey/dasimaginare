@@ -13,14 +13,14 @@ class Image extends Component {
         } = this;
 
         const {largeImageURL, likes, tags, user} = props.image;
-
+        let imgDownload = `${largeImageURL}?attachment`;
         return (
             <div className="card">
                 <img src={largeImageURL} className="card-img-top" alt={tags}/>
                 <div className="card-body">
                     <div>
                         <p><b><i class="far fa-user"></i> {user}</b> | <i className="far fa-heart"></i> {likes}</p>             
-                        <a href={largeImageURL} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+                        <a href={imgDownload} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
                             <i className="fas fa-arrow-circle-down"></i>
                         </a>
                     </div>
