@@ -259,5 +259,18 @@ section .card img {
     border-left: 0;
   }
 }
+@media (min-width: 1200px) {
+  #main {
+    width: 1200px;
+  }
+
+  .footer-credits {
+    width: 1200px;
+  }
+
+  .footer-copyright {
+    width: 1200px;
+  }
+}
 
 /*# sourceMappingURL=App.css.map */
