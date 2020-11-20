@@ -8,8 +8,6 @@ class Results extends Component {
         const images = this.props.images
 
         if(images.length === 0) return null;
-        
-        // console.log(images);
 
         return(
             <React.Fragment>
