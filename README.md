@@ -11,7 +11,7 @@ React App to search free images using an API.
 1. Clone this repo
 
     ```bash
-        git clone https://github.com/jhonnierandrey/covid-board 
+        git clone https://github.com/jhonnierandrey/dasimaginare
     ```
 
 2. Install all the required dependencies.
@@ -32,6 +32,13 @@ React App to search free images using an API.
         npm run-script devp
     ```
 
+## Contributing
+
+1. Fork it (<https://github.com/jhonnierandrey/dasimaginare/fork>)
+2. Create your own branch (`git checkout -b newFeature/yourIdea`)
+3. Commit your changes (`git commit -m 'Add your commit'`)
+4. Push to the branch (`git push`)
+5. Create a new Pull Request
 
 ### References
 
@@ -40,11 +47,3 @@ React App to search free images using an API.
 ### License
 
 This project is licensed under the MIT License
-
-## Contributing
-
-1. Fork it (<https://github.com/jhonnierandrey/dasimaginare/fork>)
-2. Create your own branch (`git checkout -b newFeature/yourIdea`)
-3. Commit your changes (`git commit -m 'Add your commit'`)
-4. Push to the branch (`git push`)
-5. Create a new Pull Request
