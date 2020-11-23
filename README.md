@@ -1,23 +1,50 @@
 # Imaginäre Images Finder
 
-React App that uses the Pixabay API.
+React App to search free images using an API.
 
-## Recommended Scripts
+> Images from [Pixabay](https://pixabay.com/)
 
-### `npm install`
+## How to use:
 
-Install all the required dependencies required for IMAGINÄRE to work.
+> Before you can run this app, you need to get an API KEY from Pixabay, please go to [Pixabay API](https://pixabay.com/service/about/api/) and add your API KEY into the .env file as a value for REACT_APP_API_KEY.
 
-### `npm start`
+1. Clone this repo
 
-Starts the APP on localhost:3000 by default.
-You will be asked to run it on another port if 3000 is already in use.
+    ```bash
+        git clone https://github.com/jhonnierandrey/covid-board 
+    ```
+
+2. Install all the required dependencies.
+
+    ```bash
+        npm i
+    ```
+
+3. To start on your local machine (starts using server.js):
+
+    ```bash
+        npm start
+    ```
+
+4. OPTIONAL : To start on your local machine (development):
+
+    ```bash
+        npm run-script devp
+    ```
+
 
 ### References
 
-Pixabay
-[Pixabay API](https://pixabay.com/service/about/api/)
+[Pixabay API Docs](https://pixabay.com/api/docs/)
 
 ### License
 
 This project is licensed under the MIT License
+
+## Contributing
+
+1. Fork it (<https://github.com/jhonnierandrey/dasimaginare/fork>)
+2. Create your own branch (`git checkout -b newFeature/yourIdea`)
+3. Commit your changes (`git commit -m 'Add your commit'`)
+4. Push to the branch (`git push`)
+5. Create a new Pull Request
