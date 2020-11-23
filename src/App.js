@@ -5,6 +5,10 @@ import Results from './components/Results';
 import Footer from './components/Footer';
 
 class App extends React.Component {
+
+  componentDidMount(){
+    console.log(process.env);
+  }
   
   state = {
     query : '',
