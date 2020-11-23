@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 class Image extends Component {
 
     displayInfo = (e) => {
-        console.log(e.target)
         document.querySelector('.hidden-data').style.display = 'block'
     }
 
@@ -13,13 +12,13 @@ class Image extends Component {
         } = this;
 
         const {largeImageURL, likes, tags, user, id} = props.image;
-        //let imgDownload = `${largeImageURL}?attachment`;
+
         return (
             <div className="card">
                 <img src={largeImageURL} className="card-img-top" alt={tags}/>
                 <div className="card-body">
                     <div>
-                        <p><b><i class="far fa-user"></i> {user}</b> | <i className="far fa-heart"></i> {likes}</p>             
+                        <p><b><i className="far fa-user"></i> {user}</b> | <i className="far fa-heart"></i> {likes}</p>             
                         <a download={id} href={largeImageURL} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
                             <i className="fas fa-arrow-circle-down"></i>
                         </a>
