@@ -33,7 +33,6 @@ body select {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  /* and then whatever styles you want*/
   height: 30px;
   width: 100px;
   padding: 5px;
@@ -262,6 +261,11 @@ section .card img {
 @media (min-width: 1200px) {
   #main {
     width: 1200px;
+  }
+
+  form {
+    width: 70%;
+    margin: auto;
   }
 
   .footer-credits {
