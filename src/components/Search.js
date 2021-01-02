@@ -9,28 +9,19 @@ class Search extends Component {
         e.preventDefault();
         
         const query = this.searchRef.current.value;
-        const orientation = this.searchOrientation.current.value;
+        //const orientation = this.searchOrientation.current.value;
 
-        this.props.searchParameters(query, orientation);
+        this.props.searchParameters(query);
     }
 
     render() {
         return (
             <form onSubmit={this.getData}>
                 <div className="form-row">
-                    <div className="col-12 col-sm-6">
-                        <input className="form-control" ref={this.searchRef} type="text" placeholder="Type your search here" />
-                    </div>
-                    <div className="col-12 col-sm-2">
-                        <select className="form-control" name="orientation" ref={this.searchOrientation}>
-                            <option value="all">All</option>
-                            <option value="vertical">Mobile</option>
-                            <option value="horizontal">Desktop</option>
-                        </select>
-                    </div>
-                    <div className="col-12 col-sm-3">
-                        <input type="submit" value="Search" className="btn btn-secondary btn-lg" />
-                    </div>
+                    <input className="form-control col-9" ref={this.searchRef} type="text" placeholder="Type your search here" />
+                    <button type="submit"   className="btn btn-secondary btn-lg col-3">
+                        <i className="fas fa-search"></i>
+                    </button>
                 </div>
             </form>
         );
