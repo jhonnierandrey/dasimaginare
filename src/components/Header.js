@@ -8,19 +8,18 @@ class Header extends React.Component {
       return(
           <header id="header">
 
-            <nav className="navbar">
-              <a className="navbar-brand" href="/">
-                  <img src={logo} alt="" width="30" height="30" className="d-inline-block align-top" /> Imaginäre
-              </a>
-            </nav>
+            <div  className="header-navbox">
+              <nav className="navbar">
+                <a className="navbar-brand" href="/">
+                    <img src={logo} alt="" width="30" height="30" className="d-inline-block align-top" /> Imaginäre
+                </a>
 
-            <div className="header-logo">
-              <a href="/">
-                <img src={logo} alt="Imaginäre" />
-              </a>
-
-              <h1>Welcome to IMAGINÄRE</h1>
-              <h1>Start searching for great Free images now</h1>
+                <div class="navbar-search">
+                  <Search
+                    searchParameters = {this.props.searchParameters}
+                  />
+                </div>
+              </nav>
             </div>
 
             <div className="header-searchbox">
