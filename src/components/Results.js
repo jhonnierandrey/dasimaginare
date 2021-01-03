@@ -3,11 +3,20 @@ import Image from './Image';
 
 class Results extends Component {
 
+    changeStyle = () => {
+        let mainBox = document.querySelector('#main');
+
+        mainBox.style.height = "auto";
+        
+    }
+
     displayImages = () => {
 
         const images = this.props.images
 
         if(images.length === 0) return null;
+
+        this.changeStyle();
 
         return(
             <React.Fragment>
