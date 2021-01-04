@@ -24,6 +24,7 @@ body {
 }
 body h1 {
   color: #FFFFFF;
+  padding: 10px;
 }
 body input, body select, body textarea {
   -webkit-appearance: none;
@@ -31,7 +32,8 @@ body input, body select, body textarea {
   font-size: 16pt;
   font-weight: 300;
   line-height: 1.75;
-  border-radius: 0.3rem;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
 }
 body #root {
   width: 100%;
@@ -57,7 +59,7 @@ body #root {
   height: 80vh;
   width: 100%;
   position: relative;
-  background-image: url("/images/wallpaper1.jpg");
+  background-image: url("https://picsum.photos/1920/1080");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -70,7 +72,7 @@ body #root {
   width: 80%;
   margin: auto;
   position: relative;
-  top: 50%;
+  top: 40%;
 }
 
 #header .header-navbox {
@@ -83,6 +85,10 @@ body #root {
 
 nav a {
   border-bottom: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 nav .navbar-search {
@@ -116,6 +122,14 @@ form {
   }
   */
 }
+form .btn {
+  background-color: #FFFFFF;
+  color: #330d69;
+  border-color: transparent;
+  border-radius: 0px;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+}
 form .form-row {
   margin: auto;
   padding: 10px;
@@ -125,16 +139,21 @@ form .form-row {
 .form-control {
   height: 3em;
   border: none;
-  border-bottom: 1px solid #585858;
+  border-top-right-radius: 0rem;
+  border-bottom-right-radius: 0rem;
   color: inherit;
   padding: 1rem;
 }
 
 .form-control:focus {
   color: #585858;
-  border-color: #585858;
   outline: 0;
   box-shadow: 0 0 0 1.2rem rgba(255, 255, 255, 0);
+}
+
+.form-row > .col, .form-row > [class*=col-] {
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 section {
@@ -196,7 +215,7 @@ section .card img {
   font-size: 1.1em;
   font-weight: 900;
   line-height: 1.5;
-  margin: 0 0 1em;
+  margin: 0px;
   text-transform: uppercase;
   letter-spacing: 0.35em;
 }
@@ -229,8 +248,15 @@ section .card img {
     margin: 0px;
   }
 
+  #header div.header-searchbox {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0.3rem;
+    top: 40%;
+  }
   #header h1 {
-    font-size: 1.75em;
+    color: #330d69;
+    padding: 10px;
+    font-size: 1em;
     line-height: initial;
     margin: 0;
   }
@@ -243,6 +269,9 @@ section .card img {
     margin: 0 0 1em;
   }
 
+  form {
+    background-color: transparent;
+  }
   form .form-row {
     width: 95%;
   }
@@ -260,14 +289,11 @@ section .card img {
   .footer-credits {
     width: 95%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
   }
-  .footer-credits a {
-    width: 50%;
-  }
   .footer-credits img {
-    width: 100%;
+    width: 150px;
   }
   .footer-credits h2 {
     margin-bottom: 0;
@@ -289,7 +315,7 @@ section .card img {
     margin: auto;
   }
   #header div.header-searchbox {
-    width: 1000px;
+    width: 800px;
   }
 
   section.row {

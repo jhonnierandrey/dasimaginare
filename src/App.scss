@@ -40,6 +40,7 @@ body {
 
     h1 {
         color: $white;
+        padding: 10px;
     }
     
     input, select, textarea {
@@ -48,7 +49,8 @@ body {
         font-size: 16pt;
         font-weight: 300;
         line-height: 1.75;
-        border-radius: .3rem;
+        border-top-left-radius: 0.3rem;
+        border-bottom-left-radius: 0.3rem;
     }
 
     #root {
@@ -79,7 +81,8 @@ body {
     position: relative;
     // background: $white;
     // overflow: hidden;
-    background-image: url('/images/wallpaper1.jpg');
+    background-image: url('https://picsum.photos/1920/1080');
+    // background-image: url('https://source.unsplash.com/random/1600x900');
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -93,7 +96,7 @@ body {
         width: 80%;
         margin: auto;
         position: relative;
-        top: 50%;
+        top: 40%;
     }
 }
 
@@ -107,6 +110,10 @@ body {
 
 nav a {
     border-bottom: none;
+    background-color: $transparent-white;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 nav .navbar-search {
@@ -145,6 +152,23 @@ form {
         text-transform: uppercase;
     }
     */
+    .btn {
+        background-color: $white;
+        color: $effect-color;
+        border-color: transparent;
+        border-radius: 0px;
+        border-top-right-radius: 0.3rem;
+        border-bottom-right-radius: 0.3rem;
+    }
+
+    // .btn:focus {
+    //     background-color: $white;
+    //     color: $effect-color;
+    //     border-color: transparent;
+    //     border-radius: 0px;
+    //     border-top-right-radius: 0.3rem;
+    //     border-bottom-right-radius: 0.3rem;
+    // }
     
     .form-row {
         margin: auto;
@@ -157,16 +181,21 @@ form {
 .form-control {
     height: 3em;
     border: none;
-    border-bottom: 1px solid $text-color;
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
     color: inherit;
     padding: 1rem;
 }
 
 .form-control:focus {
     color: $text-color;
-    border-color: $text-color;
     outline: 0;
     box-shadow: 0 0 0 1.2rem rgba(255,255,255,0);
+}
+
+.form-row>.col, .form-row>[class*=col-] {
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
 
 // IMAGES - RESULTS GRID
@@ -237,7 +266,7 @@ section {
         font-size: 1.1em;
         font-weight: 900;
         line-height: 1.5;
-        margin: 0 0 1em;
+        margin: 0px;
         text-transform: uppercase;
         letter-spacing: .35em;
     }
@@ -278,8 +307,16 @@ section {
     }
     
     #header {
+        div.header-searchbox {
+            background-color: $transparent-white;
+            border-radius: .3rem;
+            top: 40%;
+        }
+
         h1 {
-            font-size: 1.75em;
+            color: $effect-color;
+            padding: 10px;
+            font-size: 1em;
             line-height: initial;
             margin: 0;
         }
@@ -297,6 +334,8 @@ section {
     }
     
     form {
+
+        background-color: transparent;
         
         .form-row {
             width: 95%;
@@ -315,19 +354,24 @@ section {
             width: 100%;
         }
     }
+
+    // #footer {
+    //     margin: 10px;
+    //     padding: 0px;
+    // }
     
     .footer-credits {
         width: 95%;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         
-        a {
-            width: 50%;
-        }
+        // a {
+        //     width: 50%;
+        // }
         
         img {
-            width: 100%;
+            width: 150px;
         }
         
         h2 {
@@ -357,7 +401,7 @@ section {
         }
     
         div.header-searchbox {
-            width: 1000px;
+            width: 800px;
         }
     }
 
