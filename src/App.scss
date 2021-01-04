@@ -41,6 +41,7 @@ body {
     h1 {
         color: $white;
         padding: 10px;
+        text-shadow: 0 0 10px $black;
     }
     
     input, select, textarea {
@@ -137,6 +138,7 @@ form {
 
     background-color: $transparent-white;
     border-radius: .3rem;
+    box-shadow: 0 0 10px $black;
 
     /*
     .btn {
@@ -309,12 +311,14 @@ section {
     #header {
         div.header-searchbox {
             background-color: $transparent-white;
+            box-shadow: 0 0 10px $black;
             border-radius: .3rem;
             top: 40%;
         }
 
         h1 {
             color: $effect-color;
+            text-shadow: none;
             padding: 10px;
             font-size: 1em;
             line-height: initial;
@@ -336,6 +340,7 @@ section {
     form {
 
         background-color: transparent;
+        box-shadow: none;
         
         .form-row {
             width: 95%;

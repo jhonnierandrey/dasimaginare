@@ -25,6 +25,7 @@ body {
 body h1 {
   color: #FFFFFF;
   padding: 10px;
+  text-shadow: 0 0 10px #000000;
 }
 body input, body select, body textarea {
   -webkit-appearance: none;
@@ -107,6 +108,7 @@ nav .navbar-search form div {
 form {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 0.3rem;
+  box-shadow: 0 0 10px #000000;
   /*
   .btn {
       width: 100%;
@@ -250,11 +252,13 @@ section .card img {
 
   #header div.header-searchbox {
     background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px #000000;
     border-radius: 0.3rem;
     top: 40%;
   }
   #header h1 {
     color: #330d69;
+    text-shadow: none;
     padding: 10px;
     font-size: 1em;
     line-height: initial;
@@ -271,6 +275,7 @@ section .card img {
 
   form {
     background-color: transparent;
+    box-shadow: none;
   }
   form .form-row {
     width: 95%;
