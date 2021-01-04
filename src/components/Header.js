@@ -14,7 +14,7 @@ class Header extends React.Component {
                     <img src={logo} alt="" width="30" height="30" className="d-inline-block align-top" /> Imaginäre
                 </a>
 
-                <div class="navbar-search">
+                <div className="navbar-search">
                   <Search
                     searchParameters = {this.props.searchParameters}
                   />
