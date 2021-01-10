@@ -52,12 +52,12 @@ body #root {
 }
 
 #main {
-  height: 80vh;
+  height: 100vh;
   width: 100%;
 }
 
 #header {
-  height: 80vh;
+  height: 100vh;
   width: 100%;
   position: relative;
   background-image: url("https://picsum.photos/1920/1080");
@@ -109,20 +109,6 @@ form {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 0.3rem;
   box-shadow: 0 0 10px #000000;
-  /*
-  .btn {
-      width: 100%;
-      background-color: #585858;
-      color: #FFFFFF;
-      cursor: pointer;
-      font-size: .8em;
-      font-weight: 900;
-      height: 3.5em;
-      letter-spacing: .35em;
-      padding: 0 1.25em 0 1.6em;
-      text-transform: uppercase;
-  }
-  */
 }
 form .btn {
   background-color: #FFFFFF;
@@ -197,29 +183,27 @@ section .card img {
 }
 
 #footer {
-  height: 20vh;
-  padding: 1em 0;
   width: 100%;
-  background-color: #F6F6F6;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
-.footer-credits {
-  width: 80%;
-  margin: auto;
+.footer-moveup {
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
-.footer-credits a {
-  border: 0;
-}
-.footer-credits img {
-  width: 15%;
-}
-.footer-credits h2 {
-  font-size: 1.1em;
-  font-weight: 900;
-  line-height: 1.5;
-  margin: 0px;
+.footer-moveup .footer-moveup-btn {
   text-transform: uppercase;
-  letter-spacing: 0.35em;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000000;
+  box-shadow: 0 0 10px #000000;
+  border: 1px solid #585858;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.footer-moveup .footer-switcher-btn:hover {
+  color: #330d69;
 }
 
 .footer-copyright {
@@ -230,7 +214,7 @@ section .card img {
   list-style: none;
   font-size: 0.8em;
   color: rgba(88, 88, 88, 0.5);
-  margin-top: 1em;
+  margin: 0.5rem;
   line-height: 1;
 }
 .footer-copyright li {
@@ -291,19 +275,6 @@ section .card img {
     width: 100%;
   }
 
-  .footer-credits {
-    width: 95%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .footer-credits img {
-    width: 150px;
-  }
-  .footer-credits h2 {
-    margin-bottom: 0;
-  }
-
   .footer-copyright {
     width: 95%;
     text-align: center;
@@ -327,10 +298,6 @@ section .card img {
     margin: 0;
     width: 1200px;
     margin: auto;
-  }
-
-  .footer-credits {
-    width: 1200px;
   }
 
   .footer-copyright {
