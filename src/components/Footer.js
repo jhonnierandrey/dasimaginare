@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 
 class Footer extends Component {
+	scrollUp = (e) => {
+		e.preventDefault();
+		const element = document.querySelector('#header');
+		element.scrollIntoView({ behavior: 'smooth' })
+	}
+
     render() {
         return (
             <footer id="footer">
 				<div className="footer-moveup">
-					<a href="#header" className="footer-moveup-btn">
+					<a onClick={this.scrollUp} href="#header" className="footer-moveup-btn">
 						<span>Go up <i className="fas fa-arrow-circle-up"></i></span>
 					</a>
 				</div>
