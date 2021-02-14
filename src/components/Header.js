@@ -11,7 +11,7 @@ class Header extends React.Component {
             <div  className="header-navbox">
               <nav className="navbar">
                 <a className="navbar-brand" href="/">
-                    <img src={logo} alt="" width="30" height="30" className="d-inline-block align-top" /> Imaginäre
+                    <img src={logo} alt="" width="30" height="30" className="d-inline-block align-top" /> <span className="navbar-title">Imaginäre</span>
                 </a>
 
                 <div className="navbar-search">
