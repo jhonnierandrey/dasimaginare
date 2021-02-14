@@ -18,7 +18,7 @@ class Search extends Component {
         return (
             <form onSubmit={this.getData}>
                 <div className="form-row">
-                    <input className="form-control col-9" ref={this.searchRef} type="text" placeholder="Type your search here" maxlength="50"/>
+                    <input className="form-control col-9" ref={this.searchRef} type="text" placeholder="Type your search here" maxLength="50"/>
                     <button type="submit"   className="btn btn-secondary btn-lg col-3">
                         <i className="fas fa-search"></i>
                     </button>
