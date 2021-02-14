@@ -20,7 +20,8 @@ class App extends Component {
   scrollDown = () => {
 		// e.preventDefault();
     this.modifyView();
-		const element = document.querySelector('.search-results');
+		// const element = document.querySelector('.search-results');
+		const element = document.querySelector('#header');
 		element.scrollIntoView({ behavior: 'smooth' })
 	}
 
@@ -45,7 +46,7 @@ class App extends Component {
     const page = this.state.page;
     const orientation = this.state.orientation;
     
-    const url = `https://pixabay.com/api/?key=${apiKey}&q=${query}&per_page=30&page=${page}&orientation=${orientation}`
+    const url = `https://pixabay.com/api/?key=${apiKey}&q=${query}&per_page=28&page=${page}&orientation=${orientation}`
         
     fetch(url)
     .then(response => response.json())

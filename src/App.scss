@@ -82,6 +82,7 @@ body {
     background-image: url('https://picsum.photos/1920/1080');
     background-repeat: no-repeat;
     background-size: cover;
+    transition: all 1s ease;
 
     div.header-navbox {
         background-color: $transparent-white;
@@ -103,7 +104,11 @@ body {
     text-align: center;
     z-index: 2;
     position: fixed;
-} 
+}
+
+.navbar {
+    transition: all 1s ease;
+}
 
 nav a {
     border-bottom: none;
@@ -111,6 +116,12 @@ nav a {
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+nav .navbar-brand { 
+    .navbar-title{
+        text-transform: uppercase;
+    }
 }
 
 nav .navbar-search {
@@ -179,6 +190,7 @@ section {
     justify-content: center;
     padding-top: 1em;
     color: #FFFFFF;
+    transition: all 1s ease;
     
     .card {
         width: 250px;
@@ -221,6 +233,7 @@ section {
 #footer {
     //height: 20vh;
     //padding: 1em 0;
+    // border-top: 1px solid $effect-color;
     width: 100%;
     background-color: $transparent-white;
 }
@@ -270,6 +283,18 @@ section {
 }
 
 // Responsiveness
+
+@media (max-width: 500px){
+    nav .navbar-brand {
+        .navbar-title{
+            display: none;   
+        }
+    }
+
+    nav .navbar-search {
+        width: 80%;
+    }
+}
 
 @media (max-width: 768px) {
     
