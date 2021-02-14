@@ -12,9 +12,26 @@ class App extends Component {
     page: ''
   }
   
-  scroll = () => {
-    const element = document.querySelector('.jumbotron');
-    element.scrollIntoView('smooth', 'start')
+  // scroll = () => {
+  //   const element = document.querySelector('.jumbotron');
+  //   element.scrollIntoView({ behavior: 'smooth' })
+  // }
+
+  scrollDown = () => {
+		// e.preventDefault();
+    this.modifyView();
+		const element = document.querySelector('.search-results');
+		element.scrollIntoView({ behavior: 'smooth' })
+	}
+
+  modifyView = () => {
+    const headerSearch = document.querySelector('.header-searchbox');
+    const header = document.querySelector('#header');
+    const navSearch = document.querySelector('.navbar-search');
+
+    headerSearch.style.display = 'none';
+    header.style.height = '10vh';
+    navSearch.style.display = 'initial'
   }
   
   //coming features :
@@ -32,7 +49,8 @@ class App extends Component {
         
     fetch(url)
     .then(response => response.json())
-    .then(result => this.setState({images : result.hits})) 
+    .then(result => this.setState({images : result.hits}))
+    .then(this.scrollDown) 
   }
   
   searchParameters = (query, orientation) => {
