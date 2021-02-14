@@ -20,7 +20,7 @@ class Results extends Component {
 
         return(
             <React.Fragment>
-                <section className="row">
+                <section className="row search-results">
                     {images.map(image => (
                         <Image
                             key={image.id}
