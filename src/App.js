@@ -11,11 +11,6 @@ class App extends Component {
     images : [],
     page: ''
   }
-  
-  // scroll = () => {
-  //   const element = document.querySelector('.jumbotron');
-  //   element.scrollIntoView({ behavior: 'smooth' })
-  // }
 
   scrollDown = () => {
 		// e.preventDefault();
@@ -46,7 +41,7 @@ class App extends Component {
     const page = this.state.page;
     const orientation = this.state.orientation;
     
-    const url = `https://pixabay.com/api/?key=${apiKey}&q=${query}&per_page=28&page=${page}&orientation=${orientation}`
+    const url = `https://pixabay.com/api/?key=${apiKey}&q=${query}&per_page=48&page=${page}&orientation=${orientation}`
         
     fetch(url)
     .then(response => response.json())
