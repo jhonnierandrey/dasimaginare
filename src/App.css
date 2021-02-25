@@ -26,6 +26,7 @@ body h1 {
   color: #FFFFFF;
   padding: 10px;
   text-shadow: 0 0 10px #000000;
+  transition: all 1s ease-in-out;
 }
 body input, body select, body textarea {
   -webkit-appearance: none;
@@ -107,7 +108,7 @@ nav .navbar-search {
 }
 nav .navbar-search form {
   background-color: transparent;
-  border-radius: 0;
+  border-radius: 0.3rem;
 }
 nav .navbar-search form div {
   padding: 0;
