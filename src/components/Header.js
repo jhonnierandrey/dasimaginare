@@ -23,7 +23,7 @@ class Header extends React.Component {
             </div>
 
             <div className="header-searchbox">
-              <h1>Start searching for great Free images now</h1>
+              <h1>Great free images.</h1>
               
               <Search
                 searchParameters = {this.props.searchParameters}
