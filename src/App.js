@@ -31,7 +31,6 @@ class App extends Component {
   }
   
   //coming features :
-
   //prevPage = () => {}
   //nextPage = () => {}
   
