@@ -15,7 +15,7 @@ class Image extends Component {
 
         return (
             <div className="card">
-                <img src={largeImageURL} className="card-img-top" alt={tags}/>
+                <img src={largeImageURL} className="card-img-top" alt={tags} loading="lazy"/>
                 <div className="card-body">
                     <div>
                         <p><b><i className="far fa-user"></i> {user}</b> | <i className="far fa-heart"></i> {likes}</p>             
