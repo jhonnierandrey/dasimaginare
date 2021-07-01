@@ -320,6 +320,10 @@ section .card img {
     margin: auto;
   }
 
+  #footer {
+    width: 1200px;
+  }
+
   .footer-copyright {
     width: 1200px;
   }

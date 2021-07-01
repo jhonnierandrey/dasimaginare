@@ -25,6 +25,8 @@ class App extends Component {
     const header = document.querySelector('#header');
     const navSearch = document.querySelector('.navbar-search');
 
+    document.querySelector('.form-control').value = this.state.query;
+
     headerSearch.style.display = 'none';
     header.style.height = '10vh';
     navSearch.style.display = 'initial'
