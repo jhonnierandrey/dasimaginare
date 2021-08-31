@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 class Image extends Component {
 
@@ -15,7 +17,7 @@ class Image extends Component {
 
         return (
             <div className="card">
-                <img src={largeImageURL} className="card-img-top" alt={tags} loading="lazy"/>
+                <LazyLoadImage effect="blur" src={largeImageURL} className="card-img-top" alt={tags}/>
                 <div className="card-body">
                     <div>
                         <p><b><i className="far fa-user"></i> {user}</b> | <i className="far fa-heart"></i> {likes}</p>             
