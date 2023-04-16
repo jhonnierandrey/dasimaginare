@@ -4,19 +4,20 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
 
 // Palette
-
 $white : #FFFFFF;
 $black : #000000;
 
 $text-color: #585858;
 $effect-color: #330d69;
-$font-family: "Source Sans Pro",Helvetica,sans-serif;
+$font-family: "Source Sans Pro", Helvetica, sans-serif;
 
 $transparent-white : rgba(255, 255, 255, 0.5);
 
 // Theme Variables
 
-* { box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
 
 .btn:hover {
     background-color: $effect-color;
@@ -44,8 +45,10 @@ body {
         text-shadow: 0 0 10px $black;
         transition: all 1s ease-in-out;
     }
-    
-    input, select, textarea {
+
+    input,
+    select,
+    textarea {
         -webkit-appearance: none;
         font-family: $font-family;
         font-size: 16pt;
@@ -119,14 +122,13 @@ nav a {
     padding-right: 10px;
 }
 
-nav .navbar-brand { 
-    .navbar-title{
+nav .navbar-brand {
+    .navbar-title {
         text-transform: uppercase;
     }
 }
 
 nav .navbar-search {
-    display: none;
     width: 50%;
 
     form {
@@ -162,7 +164,7 @@ form {
         padding: 10px;
         justify-content: space-between;
     }
-    
+
 }
 
 .form-control {
@@ -177,10 +179,11 @@ form {
 .form-control:focus {
     color: $text-color;
     outline: 0;
-    box-shadow: 0 0 0 1.2rem rgba(255,255,255,0);
+    box-shadow: 0 0 0 1.2rem rgba(255, 255, 255, 0);
 }
 
-.form-row>.col, .form-row>[class*=col-] {
+.form-row>.col,
+.form-row>[class*=col-] {
     padding-right: 1rem;
     padding-left: 1rem;
 }
@@ -192,20 +195,20 @@ section {
     padding-top: 1em;
     color: #FFFFFF;
     transition: all 1s ease;
-    
+
     .card {
         width: 250px;
         height: 250px;
         margin: 1em;
     }
-    
+
     .card img {
         width: 250px;
         height: 250px;
         object-fit: cover;
         border-radius: 4px;
     }
-} 
+}
 
 .card-body {
     display: block;
@@ -216,7 +219,7 @@ section {
     left: 0px;
     bottom: 0px;
     right: 0px;
-    
+
     div {
         height: 100%;
         display: flex;
@@ -239,7 +242,7 @@ section {
     background-color: $transparent-white;
 }
 
-.footer-moveup{
+.footer-moveup {
     position: fixed;
     bottom: 0;
     //left: 0;
@@ -269,15 +272,15 @@ section {
     padding: 0;
     list-style: none;
     font-size: .8em;
-    color: rgba(88,88,88,.5);
+    color: rgba(88, 88, 88, .5);
     margin: 0.5rem;
     line-height: 1;
-    
+
     li {
-        border-left: 1px solid rgba(88,88,88,.15);
+        border-left: 1px solid rgba(88, 88, 88, .15);
         padding: 0 1em;
     }
-    
+
     li:first-child {
         border-left: 0;
     }
@@ -285,10 +288,10 @@ section {
 
 // Responsiveness
 
-@media (max-width: 500px){
+@media (max-width: 500px) {
     nav .navbar-brand {
-        .navbar-title{
-            display: none;   
+        .navbar-title {
+            display: none;
         }
     }
 
@@ -298,7 +301,7 @@ section {
 }
 
 @media (max-width: 768px) {
-    
+
     #main {
         width: 100%;
 
@@ -307,7 +310,7 @@ section {
             margin: 0px;
         }
     }
-    
+
     #header {
         div.header-searchbox {
             background-color: $transparent-white;
@@ -324,37 +327,38 @@ section {
             line-height: initial;
             margin: 0;
         }
-        
+
         p {
             font-size: 0.7em;
             margin: 0 0 1em;
         }
     }
-    
+
     .header-logo {
         img {
             margin: 0 0 1em;
         }
     }
-    
+
     form {
 
         background-color: transparent;
         box-shadow: none;
-        
+
         .form-row {
             width: 95%;
         }
-        
+
         .form-row div {
             padding: 0.5em;
         }
     }
-    
+
     section {
         .card {
             width: 80%;
         }
+
         .card img {
             width: 100%;
         }
@@ -365,22 +369,22 @@ section {
         text-align: center;
         flex-direction: column;
         line-height: initial;
-        
+
         li {
             border-left: 0;
         }
     }
 }
 
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
 
     #header {
-    
+
         nav {
             width: 1200px;
             margin: auto;
         }
-    
+
         div.header-searchbox {
             width: 800px;
         }
@@ -395,7 +399,7 @@ section {
     #footer {
         width: 1200px;
     }
-    
+
     .footer-copyright {
         width: 1200px;
     }

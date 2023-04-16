@@ -1,44 +1,29 @@
-import React, { Component } from 'react';
-import Image from './Image';
+import React from "react";
+import Image from "./Image";
 
-class Results extends Component {
+const Results = ({ images }) => {
+  const changeStyle = () => {
+    let mainBox = document.querySelector("#main");
+    mainBox.style.height = "auto";
+  };
 
-    changeStyle = () => {
-        let mainBox = document.querySelector('#main');
+  const displayImages = () => {
+    if (images.length === 0) return null;
 
-        mainBox.style.height = "auto";
-        
-    }
+    changeStyle();
 
-    displayImages = () => {
+    return (
+      <React.Fragment>
+        <section className="row search-results">
+          {images.map((image) => (
+            <Image key={image.id} image={image} />
+          ))}
+        </section>
+      </React.Fragment>
+    );
+  };
 
-        const images = this.props.images
-
-        if(images.length === 0) return null;
-
-        this.changeStyle();
-
-        return(
-            <React.Fragment>
-                <section className="row search-results">
-                    {images.map(image => (
-                        <Image
-                            key={image.id}
-                            image={image}
-                        />
-                    ))}
-                </section>
-            </React.Fragment>
-        )
-    }
-
-    render() {
-        return (
-            <React.Fragment>
-                {this.displayImages()}
-            </React.Fragment>
-        );
-    }
-}
+  return <React.Fragment>{displayImages()}</React.Fragment>;
+};
 
 export default Results;

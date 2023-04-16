@@ -1,82 +1,56 @@
-import React, {Component} from 'react';
+import React, { useState } from "react";
 
-import Header from './components/Header';
-import Results from './components/Results';
-import Footer from './components/Footer';
+import Header from "./components/Header";
+import Results from "./components/Results";
+import Footer from "./components/Footer";
 
-class App extends Component {
-  
-  state = {
-    query : '',
-    images : [],
-    page: ''
-  }
+const App = () => {
+  const [query, setQuery] = useState("");
+  const [images, setImages] = useState([]);
+  const [showSearchHeader, setShowSearchHeader] = useState(true);
 
-  scrollDown = () => {
-		// e.preventDefault();
-    this.modifyView();
-		// const element = document.querySelector('.search-results');
-		const element = document.querySelector('#header');
-		element.scrollIntoView({ behavior: 'smooth' })
-	}
+  const scrollDown = () => {
+    modifyView();
+    const element = document.querySelector("#header");
+    element.scrollIntoView({ behavior: "smooth" });
+  };
 
-  modifyView = () => {
-    const headerSearch = document.querySelector('.header-searchbox');
-    const header = document.querySelector('#header');
-    const navSearch = document.querySelector('.navbar-search');
+  const modifyView = () => {
+    const header = document.querySelector("#header");
+    header.style.height = "10vh";
+  };
 
-    document.querySelector('.form-control').value = this.state.query;
-
-    headerSearch.style.display = 'none';
-    header.style.height = '10vh';
-    navSearch.style.display = 'initial'
-  }
-  
-  //coming features :
-  //prevPage = () => {}
-  //nextPage = () => {}
-  
-  callApi = () => {
+  const callApi = () => {
     const apiKey = process.env.REACT_APP_API_KEY;
-    const query = this.state.query;
-    const page = this.state.page;
-    const orientation = this.state.orientation;
-    
-    const url = `https://pixabay.com/api/?key=${apiKey}&q=${query}&per_page=48&page=${page}&orientation=${orientation}`
-        
+    // pagination & orientation select temporally hardcoded
+    const page = 1;
+    const orientation = "all";
+    const url = `https://pixabay.com/api/?key=${apiKey}&q=${query}&per_page=48&page=${page}&orientation=${orientation}`;
     fetch(url)
-    .then(response => response.json())
-    .then(result => this.setState({images : result.hits}))
-    .then(this.scrollDown) 
-  }
-  
-  searchParameters = (query, orientation) => {
-    this.setState({
-      query : query,
-      orientation : orientation,
-      page : 1
-    }, () => {
-      this.callApi();
-    }
-    )
-  }
-  
-  render() {
-    return (
-      <div id="wrapper">
-        <div id="main">
-          <Header
-          searchParameters = {this.searchParameters}
-          />
-          <Results
-          images = {this.state.images}
-          />
-        </div>
-        <Footer />
+      .then((response) => response.json())
+      .then((result) => setImages(result.hits))
+      .then(scrollDown());
+  };
+
+  const searchParameters = () => {
+    if (showSearchHeader) setShowSearchHeader(false);
+    callApi();
+  };
+
+  return (
+    <div id="wrapper">
+      <div id="main">
+        <Header
+          searchParameters={searchParameters}
+          setQuery={setQuery}
+          query={query}
+          showSearchHeader={showSearchHeader}
+        />
+        <Results images={images} />
       </div>
-      );
-    }
-  }
-  
-  export default App;
-  
+      <Footer showSearchHeader={showSearchHeader} />
+    </div>
+  );
+};
+
+export default App;
