@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import Header from "./components/Header";
 import Results from "./components/Results";
 import Footer from "./components/Footer";
+import './App.css';
 
 const App = () => {
   const [query, setQuery] = useState("");
@@ -11,13 +12,15 @@ const App = () => {
 
   const scrollDown = () => {
     modifyView();
-    const element = document.querySelector("#header");
-    element.scrollIntoView({ behavior: "smooth" });
+    const element = document.querySelector("#header") as HTMLElement | undefined;
+    element?.scrollIntoView();
   };
 
   const modifyView = () => {
-    const header = document.querySelector("#header");
-    header.style.height = "10vh";
+    const header = document.querySelector("#header") as HTMLElement | undefined;
+    if (header !== undefined) {
+      header.style.height = "10vh";
+    }
   };
 
   const callApi = () => {
@@ -29,7 +32,7 @@ const App = () => {
     fetch(url)
       .then((response) => response.json())
       .then((result) => setImages(result.hits))
-      .then(scrollDown());
+      .then(() => scrollDown());
   };
 
   const searchParameters = () => {

@@ -1,9 +1,13 @@
 import React from "react";
-const Footer = ({ showSearchHeader }) => {
-  const scrollUp = (e) => {
-    e.preventDefault();
-    const element = document.querySelector("#header");
-    element.scrollIntoView({ behavior: "smooth" });
+
+type FooterProps = {
+  showSearchHeader: boolean
+}
+
+const Footer = ({ showSearchHeader }: FooterProps) => {
+  const scrollUp = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    const element = document.querySelector("#header") as HTMLElement | undefined;
+    element?.scrollIntoView();
   };
   const currentYear = new Date().getFullYear();
 
@@ -37,7 +41,7 @@ const Footer = ({ showSearchHeader }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            React
+            ReactJS
           </a>{" "}
           +{" "}
           <a
@@ -59,7 +63,7 @@ const Footer = ({ showSearchHeader }) => {
         </li>
         <li>
           <a
-            href="http://jhonnierandrey.info/"
+            href="https://www.jhonnierandrey.info/"
             target="_blank"
             rel="noopener noreferrer"
           >

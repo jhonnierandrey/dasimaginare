@@ -1,7 +1,13 @@
 import React from "react";
 
-export const Search = ({ searchParameters, query, setQuery }) => {
-  const getData = (e) => {
+type SearchProps = {
+  searchParameters: () => void,
+  query: string,
+  setQuery: React.Dispatch<React.SetStateAction<string>>,
+}
+
+export const Search = ({ searchParameters, query, setQuery }: SearchProps) => {
+  const getData = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     searchParameters();
   };
@@ -14,7 +20,7 @@ export const Search = ({ searchParameters, query, setQuery }) => {
           type="text"
           name="search"
           placeholder="Type your search here"
-          maxLength="30"
+          maxLength={30}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />

@@ -1,10 +1,18 @@
 import React from "react";
 import Image from "./Image";
 
-const Results = ({ images }) => {
+import { ImageItem } from "../types";
+
+type ResultsProps = {
+  images: ImageItem[]
+}
+
+const Results = ({ images }: ResultsProps) => {
   const changeStyle = () => {
-    let mainBox = document.querySelector("#main");
-    mainBox.style.height = "auto";
+    let mainBox = document.querySelector("#main") as HTMLDivElement | undefined;
+    if (mainBox !== undefined) {
+      mainBox.style.height = "auto";
+    }
   };
 
   const displayImages = () => {
@@ -15,7 +23,7 @@ const Results = ({ images }) => {
     return (
       <React.Fragment>
         <section className="row search-results">
-          {images.map((image) => (
+          {images.map((image: ImageItem) => (
             <Image key={image.id} image={image} />
           ))}
         </section>

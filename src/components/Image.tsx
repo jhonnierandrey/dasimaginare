@@ -1,9 +1,14 @@
-import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
-const Image = (props) => {
-  const { largeImageURL, likes, tags, user, id } = props.image;
+import { ImageItem } from "../types";
+
+type ImageProps = {
+  image: ImageItem
+}
+
+const Image = ({ image }: ImageProps) => {
+  const { largeImageURL, likes, tags, user, id } = image;
   return (
     <div className="card">
       <LazyLoadImage
