@@ -1,8 +1,15 @@
 import React from "react";
-import logo from "../logo.png";
+import logo from "../assets/img/logo.png";
 import Search from "./Search";
 
-const Header = ({ searchParameters, showSearchHeader, query, setQuery }) => {
+type HeaderProps = {
+  searchParameters: () => void,
+  showSearchHeader: boolean,
+  query: string,
+  setQuery: React.Dispatch<React.SetStateAction<string>>
+}
+
+const Header = ({ searchParameters, showSearchHeader, query, setQuery }: HeaderProps) => {
   return (
     <header id="header">
       <div className="header-navbox">
