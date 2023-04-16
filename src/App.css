@@ -28,7 +28,9 @@ body h1 {
   text-shadow: 0 0 10px #000000;
   transition: all 1s ease-in-out;
 }
-body input, body select, body textarea {
+body input,
+body select,
+body textarea {
   -webkit-appearance: none;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 16pt;
@@ -103,7 +105,6 @@ nav .navbar-brand .navbar-title {
 }
 
 nav .navbar-search {
-  display: none;
   width: 50%;
 }
 nav .navbar-search form {
@@ -149,7 +150,8 @@ form .form-row {
   box-shadow: 0 0 0 1.2rem rgba(255, 255, 255, 0);
 }
 
-.form-row > .col, .form-row > [class*=col-] {
+.form-row > .col,
+.form-row > [class*=col-] {
   padding-right: 1rem;
   padding-left: 1rem;
 }
@@ -240,7 +242,6 @@ section .card img {
   nav .navbar-brand .navbar-title {
     display: none;
   }
-
   nav .navbar-search {
     width: 80%;
   }
@@ -253,7 +254,6 @@ section .card img {
     width: 100%;
     margin: 0px;
   }
-
   #header div.header-searchbox {
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 10px #000000;
@@ -272,11 +272,9 @@ section .card img {
     font-size: 0.7em;
     margin: 0 0 1em;
   }
-
   .header-logo img {
     margin: 0 0 1em;
   }
-
   form {
     background-color: transparent;
     box-shadow: none;
@@ -287,14 +285,12 @@ section .card img {
   form .form-row div {
     padding: 0.5em;
   }
-
   section .card {
     width: 80%;
   }
   section .card img {
     width: 100%;
   }
-
   .footer-copyright {
     width: 95%;
     text-align: center;
@@ -313,17 +309,14 @@ section .card img {
   #header div.header-searchbox {
     width: 800px;
   }
-
   section.row {
     margin: 0;
     width: 1200px;
     margin: auto;
   }
-
   #footer {
     width: 1200px;
   }
-
   .footer-copyright {
     width: 1200px;
   }
