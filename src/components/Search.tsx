@@ -23,6 +23,7 @@ export const Search = ({ searchParameters, query, setQuery }: SearchProps) => {
           maxLength={30}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
+          required
         />
         <button type="submit" className="btn btn-secondary btn-lg col-3">
           <i className="fas fa-search"></i>

@@ -12,6 +12,7 @@ $effect-color: #330d69;
 $font-family: "Source Sans Pro", Helvetica, sans-serif;
 
 $transparent-white : rgba(255, 255, 255, 0.5);
+$transparent-black : rgba(0, 0, 0, 0.8);
 
 // Theme Variables
 
@@ -204,36 +205,87 @@ section {
         width: 250px;
         height: 250px;
         margin: 1em;
-    }
 
-    .card img {
-        width: 250px;
-        height: 250px;
-        object-fit: cover;
-        border-radius: 4px;
+        img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .card-body {
+            display: flex;
+            opacity: 0;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: flex-end;
+            flex-direction: column;
+
+            &:hover {
+                opacity: 100;
+            }
+
+            .card-text {
+                display: flex;
+                justify-self: center;
+
+                p {
+                    width: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .btn {
+                    margin-right: 5px;
+                    background-color: $transparent-white;
+                    color: $effect-color;
+                    border-color: transparent;
+                    border-radius: 0.3rem;
+                    width: 50%;
+
+                    &:hover {
+                        background-color: $effect-color;
+                        color: $white;
+                    }
+                }
+
+            }
+        }
     }
 }
 
-.card-body {
-    display: block;
-    opacity: 0;
-    background: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-
-    div {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
+.modal {
+    .modal-dialog {
+        max-width: 1000px;
     }
-}
 
-.card-body:hover {
-    opacity: 100;
+    .modal-content {
+        background-color: $transparent-black;
+
+        .card-body {
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+
+            .card-text {
+                display: flex;
+                justify-content: flex-end;
+
+                .btn {
+                    margin-right: 5px;
+                    background-color: $transparent-white;
+                    color: $effect-color;
+                    border-color: transparent;
+                    border-radius: 0.3rem;
+
+                    &:hover {
+                        background-color: $effect-color;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // FOOTER
@@ -301,6 +353,10 @@ section {
 
     nav .navbar-search {
         width: 80%;
+    }
+
+    .modal-btn-helpers {
+        display: none;
     }
 }
 

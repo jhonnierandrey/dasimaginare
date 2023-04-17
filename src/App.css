@@ -177,26 +177,64 @@ section .card img {
   object-fit: cover;
   border-radius: 4px;
 }
-
-.card-body {
-  display: block;
+section .card .card-body {
+  display: flex;
   opacity: 0;
   background: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  right: 0px;
-}
-.card-body div {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
   justify-content: flex-end;
+  flex-direction: column;
+}
+section .card .card-body:hover {
+  opacity: 100;
+}
+section .card .card-body .card-text {
+  display: flex;
+  justify-self: center;
+}
+section .card .card-body .card-text p {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+section .card .card-body .card-text .btn {
+  margin-right: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #330d69;
+  border-color: transparent;
+  border-radius: 0.3rem;
+  width: 50%;
+}
+section .card .card-body .card-text .btn:hover {
+  background-color: #330d69;
+  color: #FFFFFF;
 }
 
-.card-body:hover {
-  opacity: 100;
+.modal .modal-dialog {
+  max-width: 1000px;
+}
+.modal .modal-content {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.modal .modal-content .card-body {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.modal .modal-content .card-body .card-text {
+  display: flex;
+  justify-content: flex-end;
+}
+.modal .modal-content .card-body .card-text .btn {
+  margin-right: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #330d69;
+  border-color: transparent;
+  border-radius: 0.3rem;
+}
+.modal .modal-content .card-body .card-text .btn:hover {
+  background-color: #330d69;
+  color: #FFFFFF;
 }
 
 #footer {
@@ -248,6 +286,9 @@ section .card img {
   }
   nav .navbar-search {
     width: 80%;
+  }
+  .modal-btn-helpers {
+    display: none;
   }
 }
 @media (max-width: 768px) {

@@ -4,10 +4,11 @@ import Image from "./Image";
 import { ImageItem } from "../types";
 
 type ResultsProps = {
-  images: ImageItem[]
+  images: ImageItem[],
+  setCurrentImageURL: React.Dispatch<React.SetStateAction<string>>
 }
 
-const Results = ({ images }: ResultsProps) => {
+const Results = ({ images, setCurrentImageURL }: ResultsProps) => {
   const changeStyle = () => {
     let mainBox = document.querySelector("#main") as HTMLDivElement | undefined;
     if (mainBox !== undefined) {
@@ -24,7 +25,7 @@ const Results = ({ images }: ResultsProps) => {
       <React.Fragment>
         <section className="row search-results">
           {images.map((image: ImageItem) => (
-            <Image key={image.id} image={image} />
+            <Image key={image.id} image={image} setCurrentImageURL={setCurrentImageURL} />
           ))}
         </section>
       </React.Fragment>
