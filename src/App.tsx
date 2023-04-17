@@ -3,12 +3,14 @@ import { useState } from "react";
 import Header from "./components/Header";
 import Results from "./components/Results";
 import Footer from "./components/Footer";
+import Modal from "./components/Modal";
 import './App.css';
 
 const App = () => {
   const [query, setQuery] = useState("");
   const [images, setImages] = useState([]);
   const [showSearchHeader, setShowSearchHeader] = useState(true);
+  const [currentImageURL, setCurrentImageURL] = useState("https://pixabay.com/get/gaf65851b2537d12055e03e4fdd1a38ba5459314ac3355d39cdfff59e55514cf60697fc111878050df00cbd3baf57271c_1280.jpg")
 
   const scrollDown = () => {
     modifyView();
@@ -37,7 +39,7 @@ const App = () => {
 
   const searchParameters = () => {
     if (showSearchHeader) setShowSearchHeader(false);
-    callApi();
+    if (query !== "") callApi();
   };
 
   return (
@@ -49,9 +51,10 @@ const App = () => {
           query={query}
           showSearchHeader={showSearchHeader}
         />
-        <Results images={images} />
+        <Results images={images} setCurrentImageURL={setCurrentImageURL} />
       </div>
       <Footer showSearchHeader={showSearchHeader} />
+      <Modal largeImageURL={currentImageURL} />
     </div>
   );
 };
