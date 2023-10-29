@@ -4,17 +4,21 @@ import Header from "./components/Header";
 import Results from "./components/Results";
 import Footer from "./components/Footer";
 import Modal from "./components/Modal";
-import './App.css';
+import ErrorView from "./components/ErrorView";
+import "./App.scss";
 
 const App = () => {
   const [query, setQuery] = useState("");
   const [images, setImages] = useState([]);
   const [showSearchHeader, setShowSearchHeader] = useState(true);
-  const [currentImageURL, setCurrentImageURL] = useState("https://pixabay.com/get/gaf65851b2537d12055e03e4fdd1a38ba5459314ac3355d39cdfff59e55514cf60697fc111878050df00cbd3baf57271c_1280.jpg")
+  const [currentImageURL, setCurrentImageURL] = useState("");
+  const [showErrorView, setShowErrorView] = useState(false);
 
   const scrollDown = () => {
     modifyView();
-    const element = document.querySelector("#header") as HTMLElement | undefined;
+    const element = document.querySelector("#header") as
+      | HTMLElement
+      | undefined;
     element?.scrollIntoView();
   };
 
@@ -26,15 +30,18 @@ const App = () => {
   };
 
   const callApi = () => {
-    const apiKey = process.env.REACT_APP_API_KEY;
-    // pagination & orientation select temporally hardcoded
+    const apiURL = process.env.REACT_APP_API_URL;
     const page = 1;
     const orientation = "all";
-    const url = `https://pixabay.com/api/?key=${apiKey}&q=${query}&per_page=48&page=${page}&orientation=${orientation}`;
+    const url = `${apiURL}/images?search=${query}&page=${page}&orientation=${orientation}`;
     fetch(url)
       .then((response) => response.json())
-      .then((result) => setImages(result.hits))
-      .then(() => scrollDown());
+      .then((result) => setImages(result))
+      .then(() => scrollDown())
+      .catch((error) => {
+        setShowErrorView(true);
+        console.log(error);
+      });
   };
 
   const searchParameters = () => {
@@ -52,6 +59,7 @@ const App = () => {
           showSearchHeader={showSearchHeader}
         />
         <Results images={images} setCurrentImageURL={setCurrentImageURL} />
+        {showErrorView && <ErrorView />}
       </div>
       <Footer showSearchHeader={showSearchHeader} />
       <Modal largeImageURL={currentImageURL} />

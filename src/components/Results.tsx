@@ -4,9 +4,9 @@ import Image from "./Image";
 import { ImageItem } from "../types";
 
 type ResultsProps = {
-  images: ImageItem[],
-  setCurrentImageURL: React.Dispatch<React.SetStateAction<string>>
-}
+  images: ImageItem[];
+  setCurrentImageURL: React.Dispatch<React.SetStateAction<string>>;
+};
 
 const Results = ({ images, setCurrentImageURL }: ResultsProps) => {
   const changeStyle = () => {
@@ -25,7 +25,11 @@ const Results = ({ images, setCurrentImageURL }: ResultsProps) => {
       <React.Fragment>
         <section className="row search-results">
           {images.map((image: ImageItem) => (
-            <Image key={image.id} image={image} setCurrentImageURL={setCurrentImageURL} />
+            <Image
+              key={image.id}
+              image={image}
+              setCurrentImageURL={setCurrentImageURL}
+            />
           ))}
         </section>
       </React.Fragment>

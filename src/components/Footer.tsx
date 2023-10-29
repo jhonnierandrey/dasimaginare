@@ -1,12 +1,14 @@
 import React from "react";
 
 type FooterProps = {
-  showSearchHeader: boolean
-}
+  showSearchHeader: boolean;
+};
 
 const Footer = ({ showSearchHeader }: FooterProps) => {
   const scrollUp = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    const element = document.querySelector("#header") as HTMLElement | undefined;
+    const element = document.querySelector("#header") as
+      | HTMLElement
+      | undefined;
     element?.scrollIntoView();
   };
   const currentYear = new Date().getFullYear();
@@ -60,6 +62,26 @@ const Footer = ({ showSearchHeader }: FooterProps) => {
           >
             GitHub
           </a>
+        </li>
+        <li>
+          API built with{" "}
+          <a
+            href="https://docs.nestjs.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            NestJS
+          </a>{" "}
+          -
+          <i>
+            <a
+              href="https://jmi-dasimaginare-898f7bfc52cb.herokuapp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              API Status
+            </a>
+          </i>
         </li>
         <li>
           <a
