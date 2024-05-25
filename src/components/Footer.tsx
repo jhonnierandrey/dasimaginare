@@ -75,7 +75,7 @@ const Footer = ({ showSearchHeader }: FooterProps) => {
           -
           <i>
             <a
-              href="https://jmi-dasimaginare-898f7bfc52cb.herokuapp.com/"
+              href="https://jmi-dasimaginare.onrender.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -85,7 +85,7 @@ const Footer = ({ showSearchHeader }: FooterProps) => {
         </li>
         <li>
           <a
-            href="https://www.jhonnierandrey.info/"
+            href="https://www.jazr.me/"
             target="_blank"
             rel="noopener noreferrer"
           >
