@@ -25,7 +25,9 @@ export function FiltersBar({
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  function updateOrientation(value: string) {
+  function updateOrientation(value: string | null) {
+    if (!value) return;
+
     const params = new URLSearchParams(searchParams.toString());
     params.set("orientation", value);
     params.set("page", "1");
